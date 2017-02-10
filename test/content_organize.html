@@ -1,0 +1,88 @@
+<!-- 用来管理添加内容的类：添加页和组件 -->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/content_organize.css">
+	<link rel="stylesheet" href="../css/componentBase.css">
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+
+	<script type="text/javascript" src="../lib/jquery.js"></script>
+	<script type="text/javascript" src="../lib/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../lib/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="../js/content_organize.js"></script>
+	<script type="text/javascript" src="../js/componentBase.js"></script>
+
+	<!-- 内容组织管理，有可能会加载若干资源 -->
+	<script type="text/javascript">
+		$(function(){
+			var h5 = new H5();
+			h5.addPage('page-1')
+					.addComponent('logo',{
+						text:'logo',
+						width: 400,
+						height: 100,
+						center: true,
+						css:{
+							background:'grey',
+							top:  200,
+							opacity: 0
+						},
+						animateIn : {opacity:1},
+						animateOut : {opacity:0}
+					})
+					.addComponent('slogan',{
+						text:'slogan',
+						width: 400,
+						height: 100,
+						center: true,
+						css:{
+							background:'grey',
+							top:  400,
+							opacity: 0
+						},
+						animateIn : {opacity:1},
+						animateOut : {opacity:0}
+					})
+				.addPage('page-2')
+					.addComponent('caption',{
+						text:'核心理念',
+						width: 400,
+						height: 100,
+						center: true,
+						css:{
+							background:'green',
+							top:  400,
+							opacity: 0
+						},
+						animateIn : {opacity:1},
+						animateOut : {opacity:0}
+					})
+				.addPage('page-3')
+					.addComponent('caption',{
+						text:'课程分布',
+						width: 400,
+						height: 100,
+						center: true,
+						css:{
+							background:'yellow',
+							top:  400,
+							opacity: 0
+						},
+						animateIn : {opacity:1},
+						animateOut : {opacity:0}
+					})
+				.loader();
+		});
+	</script> 
+</body>
+</html>

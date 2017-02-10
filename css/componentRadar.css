@@ -1,0 +1,13 @@
+.h5_radar canvas{
+	/*用z-index分层做canvas动画*/
+	/*background-color: #25B4CA;*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+.h5_radar .text{
+	position: absolute;
+	font-size: 16px;
+}

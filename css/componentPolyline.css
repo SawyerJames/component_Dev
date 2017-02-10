@@ -1,0 +1,27 @@
+.h5_Polyline canvas{
+	/*用z-index分层做canvas动画*/
+	/*background-color: #25B4CA;*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+.h5_Polyline .text{
+	position: absolute;
+	font-size: 12px;
+	text-align: center;
+	bottom: -20px;
+	height: 20px;
+	line-height: 20px;
+	opacity: 1;
+	-webkit-transition: all 1s 1.5s;
+	-o-transition: all 1s 1.5s;
+	transition: all 1s 1.5s;
+}
+.bar_load .text{
+	opacity: 1;
+}
+.bar_leave .text{
+	opacity: 0;
+}

@@ -1,0 +1,17 @@
+.h5_point .point{
+	display: block;
+	background:#646464;
+	position: absolute;
+	border-radius: 50%;
+}
+.h5_point .name{
+	position: absolute;
+	width: 100%;
+	height: 30px;
+	top: 50%;
+	margin-top: -15px;
+	text-align: center;
+}
+.h5_point .per{
+	font-size: .5em;
+}

@@ -1,0 +1,53 @@
+.h5_Bar .line{
+	font-size: 12px;
+	height: 15px;
+	line-height: 15px;
+	margin-bottom: 6%;
+}
+.h5_Bar .rate{
+	height: 15px;
+	float: left;
+	position: relative;
+	margin-left: 5px;
+}
+.h5_Bar .rate .bg{
+	height: 100%;
+	width: 0%;
+	background-color: #99c0ff;
+	position: absolute;
+	border-radius: 3px;
+	top: 0;
+	left: 0;
+}
+.h5_Bar .name{
+	font-size: 12px;
+	width: 65px;
+	color: #000000;
+	text-align: center;
+	float: left;
+}
+.h5_Bar .per{
+	opacity: 0;
+	color: #99c0ff;
+	width: 20px;
+	float: left;
+	margin-left: 5px;
+}
+.Bar_load .rate .bg{
+	-webkit-transition: all 1s .3s;
+	-o-transition: all 1s .3s;
+	transition: all 1s .3s;
+	width: 100%;
+}
+.Bar_load .per{
+	-webkit-transition: all 1s 1s;
+	-o-transition: all 1s 1s;
+	transition: all 1s 1s;
+	opacity: 1;
+}
+.Bar_leave .rate .bg{
+	width: 0%;
+}
+.Bar_leave .per{
+	opacity: 0;
+}

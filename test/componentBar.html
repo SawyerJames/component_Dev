@@ -1,0 +1,71 @@
+<!-- 柱图 -->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<title>ITpro</title>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			background: #000000;
+			font-size: 12px;
+		}
+		.iphone{
+			width: 340px;
+			height: 540px;
+			background: #FFFFFF;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -270px 0 0 -170px;
+		}
+	</style>
+	<link rel="stylesheet" href="../css/componentBase.css">
+	<link rel="stylesheet" href="../css/componentBar.css">
+</head>
+<body>
+	<!-- 测试柱形图 -->
+	<div class="iphone">
+	</div>
+	<script type="text/javascript" src="../lib/jquery.js"></script>
+	<script type="text/javascript" src="../lib/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../lib/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="../js/componentBase.js"></script>
+	<script type="text/javascript" src="../js/componentBar.js"></script>
+	<script type="text/javascript">
+		var cfg = {
+			type : 'Bar',
+			width : 530,
+			height : 600,
+			//data数据[项目，比例，颜色]
+			data : [
+				['Css', .55],
+				['Html', .55],
+				['Javascript', .5, 'green'],
+				['jQuery', .4],
+				['Bootstrap', .2],
+				['AngularJs', .5],
+				['Vue', .35], 
+				['React', .4]
+			],
+			css : {
+				top :0,
+				opacity : 0
+			},
+			animateIn:{
+				top : 150,
+				opacity : 1
+			},
+			animateOut:{
+				top : 0,
+				opacity : 0
+			},
+			center : true,
+		}
+		var h5 = new componentBar('Bar',cfg);
+		$('.iphone').append(h5);
+	</script>
+</body>
+</html>

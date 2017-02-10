@@ -1,0 +1,63 @@
+<!-- 基础验证fullpage -->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<title>ITpro</title>
+	<style>
+		body{
+			padding: 0;
+			margin:0;
+		}
+		.component{
+			margin-bottom: 30px;
+			width: 50%;
+			height: 50px;
+			background: #757575;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<!-- 验证fullpage.js -->
+	<div id="H5">
+		<div id="page-1" class="page section">
+			<div class="component logo">logo</div>
+			<div class="component slogan">slogan</div>
+		</div>
+		<div id="page-2" class="page section">
+			<div class="component desc">desc</div>
+		</div>
+		<div id="page-3" class="page section">
+			<div class="component bar">bar</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../lib/jquery.js"></script>
+	<script type="text/javascript" src="../lib/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../lib/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#H5").fullpage({
+				'sectionsColor':['#EE0707','#47AE11','#1954BA'],
+				onLeave:function(index,nextIndex,direction){
+					$('#H5').find('.page').eq(index-1).trigger('onLeave');
+					$(this).find('.component').trigger('onLeave');
+				},
+				afterLoad:function(anchorLink,index){
+					$('#H5').find('.page').eq(index-1).trigger('afterLoad');
+					$(this).find('.component').trigger('afterLoad');
+				},
+			});
+
+			$('.page').on('onLeave',function(){
+				console.log($(this).attr('id'),'>>>','onLeave');
+			})
+			$('.page').on('afterLoad',function(){
+				console.log($(this).attr('id'),'>>>','onLoad');
+			})
+		 
+		});
+	</script>
+</body>
+</html>

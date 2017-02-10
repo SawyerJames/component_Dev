@@ -1,0 +1,20 @@
+.h5_Pie canvas{
+	/*用z-index分层做canvas动画*/
+	/*background-color: #25B4CA;*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+.h5_Pie .text{
+	position: absolute;
+	text-align: center;
+	height: 24px;
+	font-size: 14px;
+	font-weight: bold;
+	z-index: 99;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
